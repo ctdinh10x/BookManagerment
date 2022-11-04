@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Employee</title>
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+	crossorigin="anonymous">
+<link rel="stylesheet" th:href="@{/css/style-books.css}">
+    <link rel="stylesheet" th:href="@{/css/themify-icons/themify-icons.css}">
+</head>
+<body>
+	<div class="container">
+        <div class="header">
+        	<div class="header">
+                <label style="line-height: 50px;
+                color: white;
+                font-size: 20px;" th:text="'Xin chào, ' + ${#request.remoteUser}"></label>
+            </div>
+            
+            <div class="login">
+                <a th:href="@{/logout}">Đăng xuất</a>
+            </div>
+        </div>
+        
+		<div class="row">
+			<h1>List Book</h1>
+	         <div class="search">
+	         
+	            <!--     <form th:object="${book}" th:action="@{/search/{Name}(Name = ${book.Name})}" th:method="get">
+	                    <input class="input_search" type="text" name="Name" th:value={$book.Name}>
+	                    <button type="submit"><i class="ti-search"></i></button>
+	                </form> -->
+	                
+	         </div>
+		</div>
+		<table class="table table-striped table-bordered">
+			<thead class="table-dark">
+				<tr>
+					<th>Ảnh</th>
+					<th>Tiêu đề</th>
+					<th>Tác giả</th>
+					<th>Thể loại</th>
+					<th>Ngày phát hành</th>
+					<th>Số trang</th>
+					<th></th>
+				</tr>
+			</thead>
+	
+			<tbody>
+				<tr th:each="book: ${books}">
+					<td><img width="100" th:src="@{'/getimage/'+${book.Img}}" alt=""></td>
+					<td th:text="${book.Title}"></td>
+					<td th:text="${book.Author}"></td>
+					<td th:text="${book.Type}"></td>
+					<td th:text="${book.ReleaseDate}"></td>
+					<td th:text="${book.NumberOfPages}"></td>
+					<td><a th:href="@{book/{BookCode}(BookCode = ${book.BookCode})}"
+						class="btn btn-success">View</a>
+						<a th:href="@{book/delete/{BookCode}(BookCode=${book.BookCode})}" class="btn btn-danger">Delete</a></td>
+				</tr>
+			</tbody>
+		</table>
+		<a th:href="@{book/{BookCode}(BookCode = -1)}" class="btn btn-success col-lg-12">New Employee</a>
+	</div>
+</body>
+</html>

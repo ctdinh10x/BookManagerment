@@ -1,0 +1,215 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: roboto,"Noto Sans Myanmar UI",arial,sans-serif;
+}
+
+
+.all{
+    min-height: 100vh;
+    background-color: aliceblue;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.SignUp{
+    padding: 15px 30px;
+    width: 400px;
+    height: 600px;
+    background-color: #fff;
+    border-radius: 3%;
+    box-shadow:2px 5px 5px #888888;
+    display: inline-table;
+}
+
+.p_signup{
+    font-size: 30px;
+    height: 70px;
+    width: 100%;
+    display: inline;
+}
+
+
+.p_signup >p{
+    line-height: 70px;
+    display: inline-block;
+}
+
+.close{
+    float: right;
+    padding: 5px 9px 5px 9px;
+    border: 1px solid #d1d0d0;
+    border-radius: 50%;
+    box-shadow: 1px 1px #e0dede;
+}
+
+.close >a{
+    text-decoration: none;
+    color: #000;
+    font-size: 10px;
+}
+
+.ti-close{
+    /* line-height: 20px; */
+    /* text-align: center; */
+}
+
+.signup_gg{
+    padding: 20px 0px;
+    border-bottom: 1px solid #e2dfdf;
+    margin-bottom: 20px;
+}
+
+.signup_gg :hover{
+    background-color: #f1eeee;
+    cursor: pointer;
+}
+
+.signup_a{
+    border-right: 30px;
+    border-left: 30px;
+    padding: 10px;
+    border: 1px solid #888888;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 1px 1px #e2dfdf;
+}
+
+
+.signup_a >a{
+    text-decoration: none;
+    color: #000;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+
+.name_info >p{
+    padding: 5px 0px;
+    font-size: 18px;
+}
+
+.name_info >input{
+    margin: 10px 0px 20px 0px;
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #c2bfbf;
+    box-shadow: 1px 1px #e2dfdf;
+}
+
+.email_info >p{
+    padding: 5px 0px;
+    font-size: 18px;
+}
+
+.email_info >input{
+    margin: 10px 0px 20px 0px;
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #c2bfbf;
+    box-shadow: 1px 1px #e2dfdf;
+}
+
+.password_info >p{
+    padding: 5px 0px;
+    font-size: 18px;
+}
+
+.password_info >input{
+    margin: 10px 0px 20px 0px;
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #c2bfbf;
+    box-shadow: 1px 1px #e2dfdf;
+}
+
+.checkbox >input{
+    font-size: 15px;
+}
+
+.check_info{
+    font-size: 18px;
+    color: #575555;
+}
+
+.check_info >a{
+    text-decoration: none;
+    color: #3393FF;
+    font-weight: 600;
+}
+
+.signup_button{
+    margin: 20px 0px;
+    border-right: 30px;
+    border-left: 30px;
+    padding: 10px;
+    border: 1px solid #888888;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 1px 1px #c2bfbf;
+    background-color: #3393FF;
+}
+
+.btn_signup{
+    border: 10px 0px 20px 0px;
+    border-bottom: 1px solid #e2dfdf;
+    margin-bottom: 30px; 
+}
+
+.signup_button>a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+}
+
+/* .btn_signup :hover{
+    background-color: rgb(96, 110, 235);
+    cursor: pointer;
+} */
+
+.end_signup{
+    text-align: center;
+}
+
+.end_signup>a{
+    text-decoration: none;
+    color: #3393FF;
+    font-weight: 600;
+}
+
+.end_signup>p{
+    color: #575555;
+}
+
+.end_signup{
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.forgot{
+    text-align: center;
+}
+
+.forgot >a{
+    text-decoration: none;
+    color: #3393FF;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+#login{
+    padding-bottom: 30px;
+}
+
+.submit_button{
+    font-size: 20px;
+    color: white;
+    font-weight: 700;
+    background-color: #3393FF;
+    border: none;
+    cursor: pointer;
+}

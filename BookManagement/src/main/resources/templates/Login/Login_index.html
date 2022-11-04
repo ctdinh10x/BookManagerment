@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" th:href="@{/css/style-login.css}">
+    <link rel="stylesheet" th:href="@{/css/themify-icons/themify-icons.css}">
+</head>
+<body>
+        <div class="all">
+    
+            <div class="SignUp">
+                <div class="p_signup">
+                    <p>Log in</p>
+                </div>
+    
+                <div class="close">
+                    <a th:href="@{/home}">
+                        <i class="ti-close"></i>
+                    </a>
+                </div>
+                <form th:action="@{/j_spring_security_check}" class="list_info" method="post">
+                    <div class="email_info">
+                        <p>Username</p>
+                        <input type="text" name="username" required>
+                    </div>
+                    <div class="password_info">
+                        <p>Password</p>
+                        <input type="password" name="password" required>
+                    </div>
+                    <div class="check_info">
+                        <input class="checkbox" type="checkbox" name="remember-me"> Remember me
+                    </div>
+                    <div id="login" class="btn_signup">
+                        <div class="signup_button_hover">
+                            <div class="signup_button">
+                                <button class="submit_button" type="submit">Log in</button>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </form>
+                <div class="end_signup">
+                    <p>Don't have an account?</p>
+                    <a th:href="@{/book/SignUp}">Sign up</a>
+                </div>
+            </div>
+        </div>
+</body>
+</html>

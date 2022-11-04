@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book</title>
+    <link rel="stylesheet" th:href="@{/css/style-book-detail.css}">
+</head>
+<body>
+    <div class="form_all">
+        <div class="title">
+            <h1>Thông Tin Sách</h1>
+        </div>
+        <div class="form_content">
+            <form th:object="${book}" th:action="@{/book/delete/SaveDelete/{BookCode}(BookCode=${book.BookCode})}"
+th:method="DELETE" enctype="mutilpart/form-data">
+                <div class="content">
+                    <div class="photo">
+                        <p>Hình ảnh</p>
+                        <div class="img">
+                            <img width="400" height="400" th:src="@{'/getimage/'+${book.Img}}" alt="">
+                        </div>
+                        <div>
+                            <div >
+                                <input type="file" name="Img">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="inforbook">
+                        <div class="BookCode">
+                            <p>Mã sách</p>
+                            <div class="input">
+                                <input type="number" name="BookCode" th:value="${book.BookCode}" required>
+                            </div>
+                        </div>
+        
+                        <div class="Name">
+                            <p>Tên sách</p>
+                            <div class="input">
+                                <input type="text" name="Name" th:value="${book.Name}" required>
+                            </div>
+                        </div>
+        
+                        <div class="Author">
+                            <p>Tác giả</p>
+                            <div class="input">
+                                <input type="text" name="Author" th:value="${book.Author}" required>
+                            </div>
+                        </div>
+        
+                        <div class="Title">
+                            <p>Tiêu đề</p>
+                            <div class="input">
+                                <input type="text" name="Title" th:value="${book.Title}" required>
+                            </div>
+                        </div>
+        
+                        <div class="RelaeseDate">
+                            <p>Ngày phát hành</p>
+                            <div class="input">
+                                <input type="text" name="ReleaseDate" th:value="${book.ReleaseDate}" required>
+                            </div>
+                        </div>
+        
+                        <div class="NumberOfPages">
+                            <p>Số trang</p>
+                            <div class="input">
+                                <input type="number" name="NumberOfPages" th:value="${book.NumberOfPages}" required>
+                            </div>
+                        </div>
+        
+                        <div class="Type">
+                            <p>Thể loại</p>
+                            <div class="input">
+                                <input type="text" name="Type" th:value="${book.Type}" required>
+                            </div>
+                        </div>
+        
+                        <div class="Describe">
+                            <p>Mô tả</p>
+                            <div class="input">
+                                <input type="text" name="Decribe" th:value="${book.Decribe}" required><br />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="button">
+                    <div class="save_form">
+                        <button type="submit">Xoá Sách</button>
+                    </div>
+
+                    <div class="cancel">
+                        <a th:href="@{/book}">Cancel</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

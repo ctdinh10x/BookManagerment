@@ -1,0 +1,106 @@
+*{
+    /* box-sizing: border-box;
+    margin: 0; */
+    font-family: roboto,"Noto Sans Myanmar UI",arial,sans-serif;
+}
+
+.form_all{
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: aliceblue;
+}
+
+.img{
+
+}
+
+.form_content{
+    background-color: #fff;
+    padding: 15px 30px;
+    border-radius: 20px;
+    box-shadow: 2px 5px 5px #888888;
+    display: inline-table;
+    width: 1000px;
+} 
+
+.form_content form>div>p {
+    font-size: 20px;
+}
+
+.input{
+    display: flex;
+}
+
+.input >input{
+    margin: 0px 0px 20px 0px;
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #c2bfbf;
+    box-shadow: 1px 1px #e2dfdf;
+}
+
+.save_form{
+    margin: 20px 0px;
+    border-right: 30px;
+    border-left: 30px;
+    padding: 10px;
+    border: 1px solid #888888;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 1px 1px #c2bfbf;
+    background-color: #3393FF;
+}
+
+.save_form>button{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    background-color: #3393FF;
+    border: none;
+    cursor: pointer;
+}
+
+.content{
+    display: flex;
+    /* align-content: center; */
+    /* align-items: stretch; */
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+
+.content>div>div>div>input{
+    width: 400px;
+}
+
+.img{
+    margin: 10px 0px 20px 0px;
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #c2bfbf;
+    box-shadow: 1px 1px #e2dfdf;
+    width: 400px;
+    height: 400px;
+}
+
+.button>div>a{
+    color: white;
+    background-color: #FF0000;
+    padding: 10px 20px;
+    border-radius: 10px;
+    line-height: 50px;
+    text-decoration: none;
+    margin: 0px 10px;
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+.button{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}

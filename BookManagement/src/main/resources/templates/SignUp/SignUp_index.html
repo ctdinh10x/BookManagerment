@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" th:href="@{/css/style-signup.css}">
+    <link rel="stylesheet" th:href="@{/css/themify-icons/themify-icons.css}"> 
+</head>
+<body>
+    <!-- <div class="grid wide"> -->
+        <div class="all">
+            <div class="SignUp">
+                <div class="p_signup">
+                    <p>Sign up</p>
+                </div>
+    
+                <div class="close">
+                    <a th:href="@{/book}">
+                        <i class="ti-close"></i>
+                    </a>
+                </div>
+                
+                <form th:object="${user}" th:action="@{/user/save}" th:method="POST">
+                    <div class="list_info">
+                        <div class="name_info">
+                            <p>Username</p>
+                            <input type="text" name="UserName" th:value = "${user.UserName}" required>
+                        </div>
+                        <div class="email_info">
+                            <p>Email</p>
+                            <input type="text" name="Email" th:value = "${user.Email}" required>
+                        </div>
+                        <div class="password_info">
+                            <p>Password</p>
+                            <input type="password" name="PassWord" th:value = "${user.PassWord}" required>
+                        </div>
+                        <div class="password_info">
+                            <p>Phone number</p>
+                            <input type="text" name="PhoneNumber" th:value = "${user.PhoneNumber}" required>
+                        </div>
+                    </div>
+
+                    <div class="btn_signup">
+                        <div class="signup_button">
+                            <button class="submit_button" type="submit">Sign up</button>
+                        </div>
+                    </div>
+                </form>
+               
+                <div class="end_signup">
+                    <p>Already have an account?</p>
+                    <a th:href="@{/book/Login}">Log in</a>
+                </div>
+            </div>  
+        </div>
+</body>
+</html>

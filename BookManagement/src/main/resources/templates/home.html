@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/css/home.css}">
+    <title>Document</title>
+</head>
+    <body>
+        <div class="slideshow-container">
+            <div class="slide">
+                <div class="mySlides img1 dot"></div>
+                <div class="mySlides img2 dot"></div>
+                <div class="mySlides img3 dot"></div>
+                <div class="mySlides img4 dot"></div>
+                <div class="mySlides img5 dot"></div>
+                <div class="mySlides img6 dot"></div>	
+                <div class="mySlides img7 dot"></div>
+                <div class="mySlides img8 dot"></div>
+                <div class="mySlides img9 dot"></div>
+                <div class="mySlides img10 dot"></div>
+            </div>
+            
+            <div class="content">
+                <div class="header">
+                    <p class="text">THẾ GIỚI TRUYỆN TRANH</p> 
+                </div>
+                <div class="button_content">
+                    <div class="login">
+                        <a th:href="@{/book/Login}">Đăng nhập</a>
+                    </div>
+    
+                    <div class="signup">
+                        <a th:href="@{/book/SignUp}">Đăng kí</a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </body>
+    <script>
+    var slideIndex;
+    // KHai bào hàm hiển thị slide
+    function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) {
+           slides[i].style.display = "none";  
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+   
+        slides[slideIndex].style.display = "block";  
+        dots[slideIndex].className += " active";
+        //chuyển đến slide tiếp theo
+        slideIndex++;
+        //nếu đang ở slide cuối cùng thì chuyển về slide đầu
+        if (slideIndex > slides.length - 1) {
+          slideIndex = 0
+        }    
+        //tự động chuyển đổi slide sau 5s
+        setTimeout(showSlides, 5000);
+    }
+    //mặc định hiển thị slide đầu tiên 
+    showSlides(slideIndex = 0);
+   
+   
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    </script>
+</html>

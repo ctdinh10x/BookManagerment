@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+  }
+
+  .mySlides {
+      display: none;
+  }
+
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 3s;
+    animation-name: fade;
+    animation-duration: 3s;
+  }
+   
+  @-webkit-keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+   
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+
+.img1{
+    background-image: url(https://media.gqmagazine.fr/photos/61b08f7d706093c21a5fb515/16:9/w_1280,c_limit/B9723396273Z.1_20200506170704_000+G02FVMCAG.1-0.jpg);
+}
+
+.img2{
+    background-image: url(https://cuongtruyen.com/wp-content/uploads/2019/06/cac-the-loai-anime-giai-thich.jpg);
+}
+
+.img3{
+    background-image: url(https://cdn.idntimes.com/content-images/duniaku/post/20220604/naruto-4-5d90e09cf5db4f9cf29d1a371e2d3401.jpg);
+}
+
+.img4{
+    background-image: url(https://cdn.sforum.vn/sforum/wp-content/uploads/2021/09/photo-1-1615870720601745881145.jpg);
+}
+.img5{
+    background-image: url(https://vietnam-event21.jp/wp-content/uploads/2021/08/The-15-Most-Powerful-Anime-Characters-Of-All-Time-scaled-1-1024x512.jpg);
+}
+.img6{
+    background-image: url(https://www.fluentu.com/blog/japanese/wp-content/uploads/sites/6/2014/07/7-tips-learning-japanese-manga.jpg);
+}
+.img7{
+    background-image: url(https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/en_US/games/switch/d/dragon-ball-the-breakers-switch/hero);
+}
+.img8{
+    background-image: url(https://cuongtruyen.com/wp-content/uploads/2019/08/tat-ca-nhan-vat-trong-Dragon-Ball--1024x576.jpg);
+}
+.img9{
+    background-image: url(https://pibook.vn/upload/news/59239-dragon-ball.jpg);
+}
+.img10{
+    background-image: url(https://content.fun-japan.jp/renewal-prod/cms/articles/content/a90faf8d9e2e37bb245bc6bba89483b36d38ed44_2019-10-07-08-28-42.jpg);
+}
+
+.mySlides{
+    width: 100%;
+    height: 800px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.content{
+    display: inline-block;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 500px;
+    margin: auto;
+
+}
+
+.slide{
+    position: relative;
+}
+
+.content>div>div>a{
+    color: white;
+    background-color: #FF0000;
+    padding: 20px 40px;
+    border-radius: 15px;
+    line-height: 50px;
+    text-decoration: none;
+    margin: 0px 10px;
+    font-weight: bolder;
+    font-size: 30px;
+    font-family: cursive;
+}
+
+.content>div>div>a:hover{
+    background-color: #0c9e1f;
+    padding: 25px 45px;
+    font-size: 35px;
+}
+
+.button_content{
+    margin-top: 50px;
+    display: grid;
+    justify-content: space-around;
+    justify-items: center;
+}
+
+.login{
+    margin-bottom: 50px;
+}
+
+.text{
+    font-size: 90px;
+    color: white;
+    font-weight: 800;
+    font-family: cursive;
+    text-align: center;
+}
